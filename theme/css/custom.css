@@ -1,21 +1,25 @@
 .article-content,
 div.recent-posts p {
-  font: 1.2em/1.6 "PT Serif Caption",Baskerville,Garamond,Georgia,"DejaVu Serif","Times New Roman",Times,serif;
-  text-align: justify;
+    font: 1.2em/1.6 "PT Serif Caption",Baskerville,Garamond,Georgia,"DejaVu Serif","Times New Roman",Times,serif;
+    text-align: justify;
 }
 
 .featured-img {
-	margin: $pad 0;
-	width: 100%;
-	height: 200px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-blend-mode: hard-light;
-	mix-blend-mode: multiply;
+    margin: $pad 0;
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: hard-light;
+    mix-blend-mode: multiply;
 }
 
 img {
-	display: block;
-	mix-blend-mode: hard-light;
+    display: block;
+    mix-blend-mode: hard-light;
+}
+
+.recent-posts-article {
+    height: 400px;
 }
