@@ -23,3 +23,7 @@ img {
 .recent-posts-article {
     height: 400px;
 }
+
+label {
+	font-size: medium;
+}
