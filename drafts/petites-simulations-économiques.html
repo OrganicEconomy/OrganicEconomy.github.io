@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Gus" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="simulation, capitalisme, économie-organique, Simulation interactive, " />
+
+<meta property="og:title" content="Petites simulations économiques "/>
+<meta property="og:url" content="/drafts/petites-simulations-économiques.html" />
+<meta property="og:description" content="Dans cet article, je vous propose de faire quelques simulations pour voir un peu où nous mène fatalement et systématiquement une économie capitaliste et, en comparaison, où ne nous y mène pas une économie organique." />
+<meta property="og:site_name" content="L&#39;économie organique" />
+<meta property="og:article:author" content="Gus" />
+<meta property="og:article:published_time" content="2025-02-04T15:00:00+01:00" />
+<meta property="og:article:modified_time" content="2025-02-04T15:00:00+01:00" />
+<meta name="twitter:title" content="Petites simulations économiques ">
+<meta name="twitter:description" content="Dans cet article, je vous propose de faire quelques simulations pour voir un peu où nous mène fatalement et systématiquement une économie capitaliste et, en comparaison, où ne nous y mène pas une économie organique.">
+<meta property="og:image" content="images/petites-simulations-economiques-min.jpg" />
+<meta name="twitter:image" content="images/petites-simulations-economiques-min.jpg" >
+
+        <title>Petites simulations économiques  · L&#39;économie organique
+</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">L'économie organique</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                       <li  class="nav-item" >
+                           <a class="nav-link"
+                              href=
+                              "/"
+                           >Accueil</a>
+                       </li>
+                       <li  class="nav-item" >
+                               <a class="nav-link" href="/categories.html">Categories</a>
+                       </li>
+
+                       <li  class="nav-item" >
+                            <a class="nav-link" href="/pages/contact.html">Contact</a>
+                       </li>
+                       <li  class="nav-item" >
+                            <a class="nav-link" href="/pages/a-propos.html">De qui ?</a>
+                       </li>
+                       <li  class="nav-item" >
+                            <a class="nav-link" href="/pages/about.html">De quoi ?</a>
+                       </li>
+                       <li  class="nav-item" >
+                            <a class="nav-link" href="/pages/do-it.html">Faire</a>
+                       </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" name="q" id="tipue_search_input">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go !</button>
+                    </form>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="col-10 offset-1">
+<article itemscope>
+<div class="row">
+    <header class="page-header col-md-12">
+        <h1>
+            <a href="/drafts/petites-simulations-économiques.html">
+                Petites simulations économiques
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row">
+	<div class="col-md-9 article-content">
+            
+            <blockquote>
+<p>Le capitalisme est un jeu de dés : soit vous avez de la chance ou vous trichez, et vous gagnez ; soit vous êtes intègre et malchanceux, et vous perdez.</p>
+</blockquote>
+<p>Afin d'affirmer ou d'infirmer ce postulat, nous allons nous adonner dans cet article à plusieurs mises en situation.
+Pour cela, nous allons faire des simulations graphiques, à base de balles rebondissantes, afin de voir un peu les implications d'une monnaie capitaliste.</p>
+<p>Ensuite, nous testerons la même chose avec, en comparaison, l'économie organique. </p>
+<p>Et vous allez voir que les résultats sont à la fois prévisibles et surprenants.</p>
+<h1>La base</h1>
+<p>Avant tout, il est pertinent de préciser qu'une simulation reste quoi qu'il arrive une simulation.
+En tout cas, c'est ce que me dit ma femme.</p>
+<p>Ce que je veux dire c'est qu'il n'est et ne sera jamais possible de simuler la vraie vie.
+Et de toute façon ça ne servirait à rien vu qu'une simulation est justement sensée simplifier pour nous permettre de comprendre un peu.</p>
+<p>Nous allons donc faire quelques hypothèses simplificatrices pour avoir un aperçu de la réalité.</p>
+<p>Dans l'ensemble de cet article, les gens seront représentés par des balles.</p>
+<p>Chaque personne va ainsi se promener dans un espace fini et chaque contact avec une autre personne (ici un choc entre deux balles) représentera une interaction économique, terme pompeux pour dire "l'un paye l'autre".</p>
+<p>Ce qui est amusant c'est que les simulation ne sont pas enregistrées à l'avance, c'est-à-dire que c'est vous qui allez les lancer, une à une, et vous pourrez observer comment les choses évoluent.</p>
+<p>Il se peut d'ailleurs que, dans un cas particulier, les remarques faites ici soient en désaccord avec ce que vous observez.
+C'est peu probable, mais possible.
+Dans tous les cas, partagez nous l'info.</p>
+<p>Pour lancer une simulation, il suffit de cliquer sur le bouton <em>Go</em> juste au-dessus.
+Pour la mettre en pause, recliquez sur <em>Pause</em>.</p>
+<p>Simple.</p>
+<h1>Premier cas, un monde de (pas) bisounours</h1>
+<p>Imaginons une première situation qui nous servira de base.
+Le cas le plus simple que l'on puisse imaginer.</p>
+<p>Ici, chaque personne est donc une balle et tout le monde commence avec la même taille et la même vitesse que tous les autres.
+Un monde où chacun a les mêmes chances, quoi.
+De l'amour et des papillons.</p>
+<p>C'est beau !</p>
+<p>Notez que la taille de la balle indique la quantité d'argent que la personne détient.
+Donc, plus elle est grosse, plus elle est riche.
+Toute ressemblance avec des personnes réelles est pure coincidence.
+Et plus elle est petite, plus elle est pauvre.
+Il va sans dire.</p>
+<p>Cette usage de la dimension a deux rôles : un esthétique (c'est parlant, visuel) et un réaliste (plus vous êtes riche, plus vous avez d'opportunités économiques).</p>
+<p>Je vous laisse cliquer sur ce premier cas et regarder un peu comment ça évolue.</p>
+<p><button id="simulation0Start" type="button" class="btn btn-lg btn-outline-primary">Go</button>
+<button id="simulation0Pause" type="button" class="btn btn-lg btn-outline-primary">Pause</button></p>
+<div id="simulationBase"></div>
+
+<p>Au début, ça ne sautera pas aux yeux, les balles bougent et rebondissent, ok.
+Mais si vous laissez tourner la simulation assez longtemps, des écarts commencent à se creuser.
+Des balles prennent une belle dimension tandis que certaines se promènent, minuscules petits pois sur une piste de bowling.</p>
+<p>Ce qui est frappant avec ce premier essai, c'est que même <strong>dans un cas aussi simple et complètement hasardeux, des inégalités apparaissent et s'installent</strong>.</p>
+<p>Sans aucune stratégie, aucune !, des riches et des pauvres durables apparaissent.
+Les boules riches ne sont pourtant pas plus intelligentes ni plus fortes.
+Et symétriquement, les boules les plus pauvres ne sont ni nulles, ni faibles, ni bêtes.</p>
+<p>Notez cependant que cela prend un peu de temps et que, parfois, les inégalités peuvent se renversent.</p>
+<p>Cette simulation, aussi limitée soit-elle, pourrait déjà suffire à démontrer que la monnaie capitaliste (à savoir qui se conserve en temps et en quantité) crée spontanément et mécaniquement des riches et des pauvres.</p>
+<p>Car j'insiste sur le côté hasardeux des paramètres de la simulation :</p>
+<ul>
+<li>Ce n'est pas le plus pauvre qui paye le plus riche, c'est au hasard.</li>
+<li>Et pourtant on protège quand même les plus pauvres, ici : arrivés une certaine petite taille limite, ils ne dépensent plus.</li>
+</ul>
+<h1>Quelques inégalités</h1>
+<p>En partant tous égaux, on voit déjà que le système, hors de toute contrainte, mène déjà à un déséquilibrage systématique.
+Et pourtant les balles n'ont pas besoin de manger et peuvent rester pauvres sans souffrir.</p>
+<p>Alors, comme on est là pour tester, ajoutons un brin d'injustice.
+Juste un brin.
+Et, malheureusement, on pourrait reformuler sans rougir : "ajoutons un brin de réalisme".</p>
+<p>Maintenant, les personnes, toujours sous forme de balles, vont avoir des tailles de départ différentes.
+Certaines auront une cuillère d'argent dans la bouche, et d'autre un tison dans le... enfin vous cernez la métaphore positionnelle.</p>
+<p>Ajoutons également des vitesses aléatoires.
+Certaines auront beaucoup d'interactions (les rapides) et d'autres moins (les lentes).
+Cela représente, d'une certaine manière, la proportion à faire des échanges.
+Un point presque immobile représentera un hermite dans sa cabane en montagne ; là où une balle de fusil sera une accro au shopping.</p>
+<p>Voyons voir ce que ça donne.</p>
+<p><button id="simulation1Start" type="button" class="btn btn-lg btn-outline-primary">Go</button>
+<button id="simulation1Pause" type="button" class="btn btn-lg btn-outline-primary">Pause</button></p>
+<div id="simulationRandomSpeedAndSize"></div>
+
+<p>Ici, on peut faire d'autres petites observations qui semblent plutôt refléter une certaine réalité.</p>
+<p>La première est que, quand on commence gros (riche), on a quand même de très grandes chances de le finir.
+Ce qui en dit long sur l'incomensurable injustice que représente notamment l'héritage.</p>
+<p>Aussi, il semblerait que la vitesse n'ait pas vraiment d'importance, du moins comparée au capital de départ.</p>
+<p><strong>La conclusion de cette première partie est très importante parce qu'elle met en déroute pas mal d'idées reçues.</strong></p>
+<p>Beaucoup, qui ne se penchent jamais sur l'économie, ce qu'on comprend, sont tentés par quelques raccourcis tels que :</p>
+<ul>
+<li>"<em>C'est parce que l'humain est mauvais</em>"</li>
+<li>"<em>C'est à cause des entreprises</em>"</li>
+<li>"<em>C'est à cause des politiciens</em>"</li>
+<li>Et d'autres phrases du même accabit.</li>
+</ul>
+<p>Mais la vérité est plus simple et, pourtant, plus difficile à admettre : <strong>une monnaie réserve de valeur</strong> est, par construction, une monnaie capitaliste et <strong>implique spontanément des inégalités catastrophiques</strong>.</p>
+<p>Voilà, tout est déjà plus ou moins dit.
+Mais allons tout de même plus loin, histoire de voir si les choses s'améliorent ou empirent.
+Pas de spoilers.</p>
+<h1>La start-up nation</h1>
+<p>Maintenant, complexifions un peu le tout.
+Parce que les échanges entre particuliers, c'est sympa mais pas très réaliste.</p>
+<p>De nos jours, il est plutôt rare de faire du CtoC (terme de com' pour dire de particulier à particulier: "Customer to Customer").
+En fait, tout n'est que BtoC et BtoB (les entreprises vendent aux autres entreprises et aux particuliers).</p>
+<p>Donc, sans plus attendre, ajoutons cela et modifions un peu notre simulation.</p>
+<p>Voici ce qu'il y a de neuf:</p>
+<ul>
+<li>Maintenant, quand une balle en touche une autre, rien ne se passe.</li>
+<li>Les carrés représentent des entreprises.</li>
+<li>Quand une entreprise atteint une certaine taille, elle embauche une personne au hasard (qui aura alors la même couleur que l'entreprise).</li>
+<li>Quand une entreprise réduit en taille, elle licencie le dernier arrivé.</li>
+<li>Chaque entreprise verse un salaire toutes les 5 secondes à chacun de ses employés.</li>
+<li>Quand un individu touche une entreprise, il lui paye une valeur fixe, comme si un achat était fait.</li>
+</ul>
+<p><button id="simulation2Start" type="button" class="btn btn-lg btn-outline-primary">Go</button>
+<button id="simulation2Pause" type="button" class="btn btn-lg btn-outline-primary">Pause</button></p>
+<div id="simulationWithCompanies"></div>
+
+<p>Même en modifiant les paramètres (salaire payé par les entreprises toutes les 5 secondes, dépenses faites par les personnes à chaque contact, dépense des entreprises entre elles à chaque contact et aussi limite du nombre d'employés par entreprise) : dans tous des cas, les entreprises ou une entreprise spécifique prend le dessus sur tout et devient énorme.</p>
+<p>Ce qui reste représentatif d'une certaine réalité : plus une entreprise est grosse et présente dans l'esprit des clients (Google, Amazon, Facebook, Apple, Microsoft, par exemples), plus elle "attire" les dépenses et, donc, plus elle grossit.</p>
+<p><button id="simulation3Start" type="button" class="btn btn-lg btn-outline-primary">Go</button>
+<button id="simulation3Pause" type="button" class="btn btn-lg btn-outline-primary">Pause</button></p>
+<div id="simulationWithBank"></div>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="col-12 col-md-3">
+			<div style="text-align: left" class="sender-form-field" data-sender-form-id="m69gy7psaad1g9bcvba"></div>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2025-02-04T15:00:00+01:00">févr. 4, 2025</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#simulation-interactive-ref">Simulation interactive</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags.html#capitalisme-ref">capitalisme
+</a></li>
+                <li><a href="/tags.html#economie-organique-ref">économie-organique
+</a></li>
+                <li><a href="/tags.html#simulation-ref">simulation
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+<div>
+	Pour réagir à cet article, rendez-vous sur <a href="https://discord.gg/9hPsKqxH">discord</a>
+</div>
+</article>
+                    </div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+		<script>
+			(function (s, e, n, d, er) {
+				s['Sender'] = er;
+				s[er] = s[er] || function () {
+					(s[er].q = s[er].q || []).push(arguments)
+				}, s[er].l = 1 * new Date();
+				var a = e.createElement(n),
+					m = e.getElementsByTagName(n)[0];
+				a.async = 1;
+				a.src = d;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+			sender('9c84870f164227')
+		</script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+
+		<script src="scripts/matter.min.js" type="text/javascript"></script>
+		<script src="scripts/simulation-économique.js" type="text/javascript"></script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
