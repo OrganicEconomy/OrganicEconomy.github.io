@@ -893,5 +893,6 @@ body.is-home > main {
   }
 
   .home-block { padding: 3rem 1.5rem; }
+  .home-block--flush-top { padding-top: 0; }
   .home-articles { padding: 3rem 1.5rem; }
 }
