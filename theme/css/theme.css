@@ -1,0 +1,897 @@
+/*
+ * Thème : économie organique
+ * Palette :
+ *   #ddc2a5  sable chaud
+ *   #666843  kaki olive
+ *   #a44a3f  terracotta (primaire)
+ *   #090302  noir encre
+ *   #0b2027  bleu nuit (nav / footer)
+ */
+
+/* ============================================================
+   Variables Pico CSS
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Century Gothic', CenturyGothic, 'AppleGothic', 'Trebuchet MS', sans-serif;
+}
+
+:root {
+  --pico-font-size: 106.25%;
+  --pico-line-height: 1.7;
+
+  --pico-background-color: #faf7f3;
+  --pico-color: #090302;
+
+  /* Primaire : terracotta */
+  --pico-primary:         #a44a3f;
+  --pico-primary-hover:   #8c3f35;
+  --pico-primary-focus:   rgba(164, 74, 63, 0.2);
+  --pico-primary-inverse: #faf7f3;
+
+  /* Secondaire : olive */
+  --pico-secondary:         #666843;
+  --pico-secondary-hover:   #555637;
+  --pico-secondary-focus:   rgba(102, 104, 67, 0.2);
+  --pico-secondary-inverse: #faf7f3;
+
+  /* Contraste */
+  --pico-contrast:         #090302;
+  --pico-contrast-hover:   #000;
+  --pico-contrast-inverse: #faf7f3;
+
+  /* Textes atténués et bordures */
+  --pico-muted-color:        #7a6e65;
+  --pico-muted-border-color: #e0d2c4;
+
+  /* Titres */
+  --pico-h1-color: #a44a3f;
+  --pico-h2-color: #0b2027;
+  --pico-h3-color: #0b2027;
+  --pico-h4-color: #090302;
+  --pico-h5-color: #090302;
+  --pico-h6-color: #090302;
+
+  /* Cartes */
+  --pico-card-background-color:            #ffffff;
+  --pico-card-border-color:                #ebe1d8;
+  --pico-card-box-shadow:                  0 1px 3px rgba(9, 3, 2, 0.06), 0 1px 8px rgba(9, 3, 2, 0.04);
+  --pico-card-sectioning-background-color: #faf7f3;
+
+  /* Code */
+  --pico-code-color:              #666843;
+  --pico-code-background-color:   #f3ede6;
+  --pico-code-kbd-background-color: #0b2027;
+  --pico-code-kbd-color:          #ddc2a5;
+
+  --pico-border-radius: 0.375rem;
+}
+
+/* ============================================================
+   Liens (contenu principal uniquement)
+   ============================================================ */
+body > main a {
+  color: #a44a3f;
+  text-decoration-color: rgba(164, 74, 63, 0.35);
+  text-underline-offset: 0.15em;
+}
+
+body > main a:visited {
+  color: #666843;
+  text-decoration-color: rgba(102, 104, 67, 0.35);
+}
+
+body > main a:hover {
+  color: #8c3f35;
+  text-decoration-color: rgba(164, 74, 63, 0.75);
+}
+
+/* ============================================================
+   Layout – largeur max centrée
+   ============================================================ */
+body > header,
+body > main,
+body > footer {
+  box-sizing: border-box;
+}
+
+body > main {
+  max-width: 62rem;
+  margin-inline: auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+
+/* ============================================================
+   Header / Nav – 3 colonnes (logo | menu | réseaux)
+   ============================================================ */
+body > header {
+  width: 100%;
+  max-width: none;
+  background-color: #faf7f3;
+  border-bottom: 1px solid rgba(9,3,2,0.08);
+  padding-block: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 0.85rem 1.5rem;
+}
+
+/* Logo image */
+#site-logo {
+  display: flex;
+  flex-shrink: 0;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.15s ease;
+  grid-column: 2;
+  justify-self: center;
+}
+
+#site-logo:hover {
+  opacity: 0.75;
+}
+
+.site-logo-img {
+  height: clamp(2.8rem, 5.5vw, 4rem);
+  width: auto;
+  max-width: none;
+  display: block;
+}
+
+/* Menu centre (desktop) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.nav-links a {
+  color: #090302;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: #a44a3f;
+}
+
+/* Droite : icônes sociales + burger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  justify-self: start;
+  grid-column: 1;
+}
+
+.nav-social a {
+  display: flex;
+  align-items: center;
+  color: #090302;
+  opacity: 0.65;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.nav-social a:hover {
+  opacity: 1;
+  color: #a44a3f;
+}
+
+/* Burger – toujours visible, toujours à droite */
+.nav-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  justify-self: end;
+  grid-column: 3;
+}
+
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #090302;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.is-open span:nth-child(2) { opacity: 0; }
+.nav-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Menu mobile */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 0.75rem 1.5rem 1.25rem;
+  background: #faf7f3;
+  border-top: 1px solid rgba(9,3,2,0.08);
+}
+
+.nav-mobile.is-open {
+  display: flex;
+}
+
+.nav-mobile > a {
+  display: block;
+  padding: 0.7rem 0.25rem;
+  color: #090302;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(9,3,2,0.08);
+}
+
+.nav-mobile > a:hover { color: #a44a3f; }
+
+.nav-mobile-social {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+}
+
+.nav-mobile-social a {
+  display: flex;
+  align-items: center;
+  color: #090302;
+  opacity: 0.65;
+}
+
+.nav-mobile-social a:hover {
+  opacity: 1;
+  color: #a44a3f;
+}
+
+
+/* ============================================================
+   Footer
+   ============================================================ */
+body > footer {
+  width: 100%;
+  max-width: none;
+  background-color: #ddc2a5;
+  background-image: radial-gradient(circle, rgba(9,3,2,0.07) 1px, transparent 1px);
+  background-size: 4px 4px;
+  color: #090302;
+  margin-top: 0;
+  padding: 0;
+}
+
+.footer-inner {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #090302;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover { color: #a44a3f; }
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  color: #090302;
+  opacity: 0.65;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.footer-social a:hover {
+  opacity: 1;
+  color: #a44a3f;
+}
+
+body > footer small,
+body > footer small a {
+  color: rgba(9,3,2,0.55);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+body > footer small a:hover { color: #a44a3f; }
+
+/* ============================================================
+   Grille d'articles (blog.html)
+   ============================================================ */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--pico-card-border-color);
+  border-radius: var(--pico-border-radius);
+  overflow: hidden;
+  background: var(--pico-card-background-color);
+  box-shadow: var(--pico-card-box-shadow);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card:hover {
+  box-shadow: 0 6px 24px rgba(9, 3, 2, 0.14);
+  transform: translateY(-3px) rotate(-0.4deg);
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card-img {
+  width: 100%;
+  height: 172px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-card-img-placeholder {
+  width: 100%;
+  height: 172px;
+  background: linear-gradient(135deg, #ddc2a5 0%, #c5a882 100%);
+  flex-shrink: 0;
+}
+
+.article-card-body {
+  padding: 1rem 1.25rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card h3 {
+  font-size: 1rem;
+  color: #0b2027;
+  margin-bottom: 0.4rem;
+  margin-top: 0;
+  line-height: 1.35;
+}
+
+.article-card p {
+  font-size: 0.875rem;
+  color: var(--pico-muted-color);
+  flex: 1;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.article-card time {
+  font-size: 0.78rem;
+  color: var(--pico-muted-color);
+}
+
+/* ============================================================
+   Article et page – contenu
+   ============================================================ */
+.article-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.article-meta {
+  font-size: 0.875rem;
+  color: var(--pico-muted-color);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+.article-meta a {
+  color: var(--pico-muted-color);
+}
+
+.article-content {
+  max-width: 46rem;
+  margin-inline: auto;
+  counter-reset: section;
+}
+
+.article-content img {
+  max-width: 100%;
+  border-radius: 0.25rem;
+}
+
+.article-content img.float-right {
+  float: right;
+  margin: 0.25rem 0 1.25rem 2rem;
+  max-width: 38%;
+  border-radius: 0.5rem;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .article-content img.float-right {
+    float: none;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+/* ============================================================
+   Partage et Discord
+   ============================================================ */
+.share-links {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--pico-muted-border-color);
+  font-size: 0.875rem;
+  color: var(--pico-muted-color);
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.share-links a {
+  margin-right: 1.25rem;
+  color: var(--pico-primary);
+}
+
+.discord-cta {
+  margin-top: 1.5rem;
+  padding: 0.875rem 1.25rem;
+  background: rgba(164, 74, 63, 0.18);
+  border-left: 3px solid #a44a3f;
+  border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
+  font-size: 0.9rem;
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+/* ============================================================
+   Newsletter Sender.net
+   ============================================================ */
+.newsletter-widget {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--pico-muted-border-color);
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+/* ============================================================
+   Navigation article précédent / suivant
+   ============================================================ */
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--pico-muted-border-color);
+  font-size: 0.875rem;
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.article-nav a {
+  color: var(--pico-primary);
+}
+
+/* ============================================================
+   Page d'accueil – contenu riche avec images flottantes
+   ============================================================ */
+.page-content {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.page-content img {
+  max-width: 100%;
+  border-radius: 0.375rem;
+}
+
+.page-content img.float-right {
+  float: right;
+  margin: 0.25rem 0 1.25rem 2rem;
+  max-width: 38%;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .page-content img.float-right {
+    float: none;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+/* ============================================================
+   Pull quotes (blockquote dans les articles et pages)
+   ============================================================ */
+.article-content blockquote,
+.page-content blockquote {
+  font-family: 'Century Gothic', CenturyGothic, 'AppleGothic', 'Trebuchet MS', sans-serif;
+  font-size: 1.3em;
+  font-style: normal;
+  color: #a44a3f;
+  border-left: none;
+  border-top: 2px solid #a44a3f;
+  padding: 1rem 0 0.25rem;
+  margin: 2.5rem 0;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   Couleurs des titres dans le contenu (h2 olive, h3 terracotta)
+   ============================================================ */
+.article-content h2,
+.page-content h2 {
+  color: #666843;
+}
+
+.article-content h3,
+.page-content h3 {
+  color: #a44a3f;
+}
+
+.article-content h4,
+.page-content h4 {
+  color: #0b2027;
+}
+
+/* ============================================================
+   Numéros de section (compteur CSS sur les h2 des articles)
+   ============================================================ */
+.article-content h2 {
+  counter-increment: section;
+}
+
+.article-content h2::before {
+  content: counter(section, decimal-leading-zero);
+  display: block;
+  font-size: 0.58em;
+  font-weight: 400;
+  color: rgba(102, 104, 67, 0.45);
+  letter-spacing: 0.25em;
+  margin-bottom: 0.1em;
+  font-family: 'Century Gothic', CenturyGothic, 'AppleGothic', 'Trebuchet MS', sans-serif;
+}
+
+/* ============================================================
+   Effet stabilo sur <strong> (remplace le gras)
+   Le 1er dégradé crée l'irrégularité horizontale (angle 107°),
+   le 2e ajoute une variation d'épaisseur verticale (176°).
+   background-position: 0 100% cale la bande sur le bas du texte.
+   box-decoration-break: clone répète l'effet ligne par ligne.
+   ============================================================ */
+.article-content strong,
+.page-content strong {
+  font-weight: 400;
+  background-image:
+    linear-gradient(
+      107deg,
+      transparent 0.3%,
+      rgba(221, 194, 165, 0.58) 1.5%,
+      rgba(221, 194, 165, 0.42) 28%,
+      rgba(221, 194, 165, 0.55) 58%,
+      rgba(221, 194, 165, 0.45) 93%,
+      transparent 99%
+    ),
+    linear-gradient(
+      176deg,
+      transparent 20%,
+      rgba(221, 194, 165, 0.15) 52%,
+      transparent 80%
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 58%;
+  background-position: 0 100%;
+  padding: 0 0.15em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.article-content em,
+.page-content em {
+  font-style: italic;
+  background-image:
+    linear-gradient(
+      107deg,
+      transparent 0.3%,
+      rgba(102, 104, 67, 0.25) 1.5%,
+      rgba(102, 104, 67, 0.16) 28%,
+      rgba(102, 104, 67, 0.22) 58%,
+      rgba(102, 104, 67, 0.18) 93%,
+      transparent 99%
+    ),
+    linear-gradient(
+      176deg,
+      transparent 20%,
+      rgba(102, 104, 67, 0.06) 52%,
+      transparent 80%
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 55%;
+  background-position: 0 100%;
+  padding: 0 0.1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ============================================================
+   Réseaux sociaux – page contact
+   ============================================================ */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem auto;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #a44a3f;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.social-links a:hover {
+  color: #8c3f35;
+  text-decoration: underline;
+}
+
+.social-links svg {
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Page d'accueil – blocs alternés image / texte
+   ============================================================ */
+body.is-home > main {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-block {
+  padding: 5rem 2rem;
+  margin: 0;
+}
+
+.home-block .newsletter-widget {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 1rem;
+  max-width: none;
+}
+
+.home-block--alt {
+  background-color: #f3ece3;
+}
+
+.home-block--dark {
+  background-color: #152d37;
+}
+
+.home-block--dark .home-block__text h2 {
+  color: #ddc2a5;
+}
+
+.home-block--dark .home-block__text p {
+  color: rgba(250, 247, 243, 0.85);
+}
+
+.home-block--dark .home-block__text strong {
+  background-image: none;
+  font-weight: 600;
+  color: #faf7f3;
+}
+
+.home-block--flush-top {
+  padding-top: 0;
+}
+
+.home-block__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.home-placeholder {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  border-radius: 0.5rem;
+}
+
+.home-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+.home-img--blend {
+  mix-blend-mode: multiply;
+}
+
+.home-block__image--top {
+  align-self: start;
+}
+
+.home-placeholder--sand  { background: linear-gradient(135deg, #ddc2a5 0%, #c9a882 100%); }
+.home-placeholder--olive { background: linear-gradient(135deg, #8a8d5c 0%, #666843 100%); }
+.home-placeholder--night { background: linear-gradient(135deg, #1a3a44 0%, #0b2027 100%); }
+
+.home-block__text h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+  color: #0b2027;
+}
+
+.home-block__text p {
+  color: #090302;
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #a44a3f;
+  color: #faf7f3 !important;
+  border-radius: var(--pico-border-radius);
+  text-decoration: none !important;
+  font-family: 'Century Gothic', CenturyGothic, 'AppleGothic', 'Trebuchet MS', sans-serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.home-btn:hover {
+  background-color: #8c3f35;
+  transform: translateY(-2px);
+}
+
+.home-btn--outline {
+  background-color: transparent;
+  color: #0b2027 !important;
+  border: 2px solid #0b2027;
+}
+
+.home-btn--outline:hover {
+  background-color: #0b2027;
+  color: #faf7f3 !important;
+}
+
+.home-articles {
+  padding: 5rem 2rem 5rem;
+  background-color: #faf7f3;
+  margin-bottom: 0;
+}
+
+.home-articles__inner {
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.home-articles h2 {
+  color: #0b2027;
+  margin-bottom: 2rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.home-articles__more {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Cartes accueil : image animée seule, titre hors cadre */
+.article-card--home {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.article-card--home:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.article-card--home .article-card-img,
+.article-card--home .article-card-img-placeholder {
+  height: 206px;
+  border-radius: var(--pico-border-radius);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.article-card--home:hover .article-card-img,
+.article-card--home:hover .article-card-img-placeholder {
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 0 8px 28px rgba(9, 3, 2, 0.14);
+}
+
+.article-card--home .article-card-body {
+  background: transparent;
+  text-align: center;
+  padding: 2rem 0.25rem 0.5rem;
+}
+
+.article-card--home h3 {
+  margin: 0;
+  color: #0b2027;
+}
+
+@media (max-width: 600px) {
+  .nav-social { display: none; }
+}
+
+@media (max-width: 820px) {
+  .home-block__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .home-block__inner--reverse .home-block__image {
+    order: -1;
+  }
+
+  .home-block { padding: 3rem 1.5rem; }
+  .home-articles { padding: 3rem 1.5rem; }
+}
