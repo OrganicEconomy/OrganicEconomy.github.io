@@ -895,4 +895,21 @@ body.is-home > main {
   .home-block { padding: 3rem 1.5rem; }
   .home-block--flush-top { padding-top: 0; }
   .home-articles { padding: 3rem 1.5rem; }
+
+  body > main > article {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  body > main > article > header {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    background-color: transparent;
+    border-bottom: none;
+    border-radius: 0;
+  }
 }
