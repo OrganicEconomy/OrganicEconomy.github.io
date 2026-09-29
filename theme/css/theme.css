@@ -115,6 +115,10 @@ body > header {
   z-index: 100;
 }
 
+#telecharger-livret {
+  scroll-margin-top: 6rem;
+}
+
 .main-nav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
