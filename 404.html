@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Suipotryot">
-<meta name="description" content="Cette page ne semble pas exister. Vous êtes perdu ? Retourner vers le blog =&gt; Blog"><meta property="og:title" content="Not Found">
+<meta name="description" content="// The /app/ page is a client-side-routed SPA (organic-webapp) — GitHub // Pages has no server-side routing, so a direct visit/refresh on one of // its deep links (e.g. /app/pay) lands here instead. Stash the intended // path and bounce to /app/, which restores it once Angular boots (see // organic-webapp&#39;s src/index …"><meta property="og:title" content="Not Found">
 <meta property="og:url" content="/pages/not-found.html">
-<meta property="og:description" content="Cette page ne semble pas exister. Vous êtes perdu ? Retourner vers le blog =&gt; Blog"><meta property="og:site_name" content="Économie organique">
+<meta property="og:description" content="// The /app/ page is a client-side-routed SPA (organic-webapp) — GitHub // Pages has no server-side routing, so a direct visit/refresh on one of // its deep links (e.g. /app/pay) lands here instead. Stash the intended // path and bounce to /app/, which restores it once Angular boots (see // organic-webapp&#39;s src/index …"><meta property="og:site_name" content="Économie organique">
 <meta property="og:type" content="website">
   <title>Not Found · Économie organique</title>
   <link rel="icon" type="image/png" href="/images/O.png">
@@ -42,7 +42,20 @@
     <h1>Not Found</h1>
   </header>
   <div class="page-content clearfix">
-    <p><img src="images/404.jpg" alt="Un lego qui cherche son chemin"></p>
+    <script>
+  // The /app/ page is a client-side-routed SPA (organic-webapp) — GitHub
+  // Pages has no server-side routing, so a direct visit/refresh on one of
+  // its deep links (e.g. /app/pay) lands here instead. Stash the intended
+  // path and bounce to /app/, which restores it once Angular boots (see
+  // organic-webapp's src/index.html). Anything outside /app/ is a real
+  // 404 and falls through to the page below.
+  if (location.pathname.indexOf('/app/') === 0) {
+    sessionStorage.setItem('app-redirect-path', location.pathname + location.search + location.hash);
+    location.replace('/app/');
+  }
+</script>
+
+<p><img src="images/404.jpg" alt="Un lego qui cherche son chemin"></p>
 <p>Cette page ne semble pas exister. Vous êtes perdu ?</p>
 <p>Retourner vers le blog =&gt; <a href="/blog.html">Blog</a></p>
   </div>
