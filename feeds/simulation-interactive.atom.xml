@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Économie organique - Simulation interactive</title><link href="https://economie-organique.fr/" rel="alternate"/><link href="https://economie-organique.fr/feeds/simulation-interactive.atom.xml" rel="self"/><id>https://economie-organique.fr/</id><updated>2025-03-26T15:00:00+01:00</updated><entry><title>Simulations organiques</title><link href="https://economie-organique.fr/simulations-organiques.html" rel="alternate"/><published>2025-03-26T15:00:00+01:00</published><updated>2025-03-26T15:00:00+01:00</updated><author><name>Gus</name></author><id>tag:economie-organique.fr,2025-03-26:/simulations-organiques.html</id><summary type="html">&lt;p&gt;Après nos simulations du capitalisme, mettons à la même épreuve l'économie organique pour voir comment elle s'en sort.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Cet article fait suite aux &lt;a href="https://economie-organique.fr/petites-simulations-économiques.html"&gt;premières simulation du capitalisme à (re)lire ici&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Les articles arrivent lentement sur le blog, je sais bien.
+Mais vous n'imaginez pas le temps que ça prend pour développer toutes ces simulations et autres articles interactifs (parce que c'est moi qui code tout de mes mimines).&lt;/p&gt;
+&lt;p&gt;Quoi qu'il en soit, dans l'article précédent nous avons vu que le capitalisme, qui repose sur la monnaie résèrve de valeur, on ne le dira jamais assez, semble bel et bien être un simple jeu de chance.
+Les chanceux gagnent, les malchanceux perdent.
+Notez que les tricheurs gagnent aussi, ce qui n'est pas anodin.&lt;/p&gt;
+&lt;p&gt;On pourrait même se demander si tous les "gagnants" ne sont pas des tricheur oO
+(--&lt;em&gt;Tête qui explose !&lt;/em&gt;--)&lt;/p&gt;
+&lt;p&gt;Mais ce n'est pas le sujet et, surtout, répondre a cette question n'a aucun intérêt.
+J'vous jure.&lt;/p&gt;
+&lt;h2&gt;Petit rappel&lt;/h2&gt;
+&lt;p&gt;Nous allons cette fois-ci mettre à l'épreuve l'économie organique.
+Parce que c'est facile de triquiter, mais autrement plus exigeant de proposer !&lt;/p&gt;
+&lt;p&gt;Comme précédemment dit, tout ce que nous allons voir dans cet article n'est que simulation relativement simplifiée et ne sert bien sûr pas de démonstration formelle.
+Néanmoins, avoir dans ces simulations de meilleurs résultats que le capitalisme serait déjà une belle promesse d'avenir.&lt;/p&gt;
+&lt;p&gt;Je dis ça, je dis rien...&lt;/p&gt;
+&lt;p&gt;Dans les simulations qui vont suivre, chaque balle représente une personne.
+Ces personnes se promènent dans la vie et, parfois (souvent même) rencontrent d'autres personnes.
+Ceci est représenté par le choc entre deux balles.&lt;/p&gt;
+&lt;p&gt;Et, lors d'une rencontre, selon les critères de la simulation, il peut y avoir échange économique (un paiement de l'un vers l'autre).
+Ici, quand A paye B, on imagine que B lui a vendu quelque chose.
+Ce "quelque chose" n'a néanmoins aucune importance pour nos simulation: des carottes ou des cigarettes, c'est pareil.&lt;/p&gt;
+&lt;p&gt;Enfin, plus un cercle est gros, plus il est riche.
+Et réciproquement plus un cercle est petit, plus il est pauvre.&lt;/p&gt;
+&lt;p&gt;Notez que les simulations ne sont pas enregistrées à l'avance, c'est vous qui les lancez, une à une, et vous pourrez observer comment les choses évoluent.&lt;/p&gt;
+&lt;p&gt;Il se peut d'ailleurs que, dans un cas particulier, les remarques faites ici soient en désaccord avec ce que vous observez.
+C'est peu probable, mais possible.&lt;/p&gt;
+&lt;p&gt;Pour lancer une simulation, cliquez sur le bouton &lt;em&gt;Go&lt;/em&gt; juste au-dessus.
+Pour la mettre en pause, cliquez sur &lt;em&gt;Pause&lt;/em&gt;.&lt;/p&gt;
+&lt;h2&gt;Avant de commencer&lt;/h2&gt;
+&lt;p&gt;Ici, on simule l'économie organique.
+Si vous ne connaissez pas ou si à un moment vous ne comprenez plus rien, relisez &lt;a href="/"&gt;la page d'informations =&amp;gt; ici&lt;/a&gt;, ça pourrait vous aider.&lt;/p&gt;
+&lt;h2&gt;Premier cas, les gens&lt;/h2&gt;
+&lt;p&gt;Dans cette première simulation, voici les éléments à comprendre:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chaque individu commence niveau 1, c'est à dire avec une expérience de 0 (zéro).&lt;/li&gt;
+&lt;li&gt;Un jour dure ici 1 seconde (les citoyens créent donc leur monnaie chaque seconde).&lt;/li&gt;
+&lt;li&gt;Un mois dure ici 5 secondes (le temps avant que la monnaie non dépensée ne périme).&lt;/li&gt;
+&lt;li&gt;Quand un individu en rencontre un autre, le premier (choisi au hasard) paye l'autre une unité de monnaie.&lt;/li&gt;
+&lt;li&gt;Ici, la &lt;a href="https://economie-organique.fr/definition-monnaie-dinvestissement.html"&gt;monnaie d'investissement&lt;/a&gt; ne sert à rien.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;button id="simulationOrgaBaseStart" type="button" class="btn btn-lg btn-outline-primary"&gt;Go&lt;/button&gt;
+&lt;button id="simulationOrgaBasePause" type="button" class="btn btn-lg btn-outline-primary"&gt;Pause&lt;/button&gt;&lt;/p&gt;
+&lt;div id="simulationOrgaBase"&gt;&lt;/div&gt;
+
+&lt;p&gt;Alors, qu'est-ce qu'on remarque ?&lt;/p&gt;
+&lt;p&gt;Déjà, c'est hypnotique, ces balles qui rebondissent sans fin.
+Comme un aquarium, en plus rapide.&lt;/p&gt;
+&lt;p&gt;Mais surtout, voici les points &lt;strong&gt;extrêmement&lt;/strong&gt; importants, impactants et tout et tout:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Il y a des écarts de richesse, mais ils sont restreints.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Il n'y a pas de &lt;em&gt;très pauvre&lt;/em&gt;&lt;/strong&gt;, c'est fou !&lt;/li&gt;
+&lt;li&gt;Il n'y a pas non plus de &lt;em&gt;très riche&lt;/em&gt; !&lt;/li&gt;
+&lt;li&gt;Comme la courbe de l'&lt;a href="https://economie-organique.fr/definition-experience-economique.html"&gt;expérience économique &lt;/a&gt;, les niveaux des citoyens montent rapidement au début de la simulation, puis se stabilisent pour grandir de plus en plus lentement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Evidemment, si on laisse tourner très longtemps la simulation, les balles deviennent relativement grosses.
+Ceci est dû au fait qu'il n'y a pas de "départs" (la mort, hein) ni d'arrivées (la naissance, en fait), éléments qu'il y aurait dans le monde réel.&lt;/p&gt;
+&lt;p&gt;Mais même dans ce cadre, il n'y a pas d'&lt;em&gt;explosion&lt;/em&gt; : les balles grossissent encore et encore, lentement mais sûrement, sans qu'il n'y ait de réaction en chaîne violente.&lt;/p&gt;
+&lt;p&gt;Enfin, et c'est le poète qui est en moi qui parle, le gonflement des balles lors de la création monétaire à chaque seconde fait comme des batements de coeur, ce qui reflète joliement le côté &lt;em&gt;vivant&lt;/em&gt; de l'économie organique.&lt;/p&gt;
+&lt;h2&gt;Soyons inégaux&lt;/h2&gt;
+&lt;p&gt;Seconde situation, maintenant imaginons que chaque citoyen démarre avec une expérience économique différente.&lt;/p&gt;
+&lt;p&gt;En pratique, c'est comme si des gens inscrits et utilisant la monnaie organique depuis longtemps se joignaient à des personnes découvrant le concept et démarrant tout juste.&lt;/p&gt;
+&lt;p&gt;Mais alors là, j'aime autant vous dire qu'on ne parle pas des mêmes inégalités que dans notre simulation du capitalisme.
+Dans cette dernière, les gens commençaient avec un capital entre 0 et 30€.
+Ce qui, à l'échelle de la simulation est pas mal, mais encore tout à fait limité.
+Et on a vu que cette inégalité, aussi petite soit elle, a eu un impact énorme, colossal sur les situations économiques persistantes des balles/gens.&lt;/p&gt;
+&lt;p&gt;Ici, les balles commencent avec une expérience économique entre 0 et 500, ce qui est bien pire !
+Mais voyons comment ça se passe.&lt;/p&gt;
+&lt;p&gt;&lt;button id="simulationOrgaInegalStart" type="button" class="btn btn-lg btn-outline-primary"&gt;Go&lt;/button&gt;
+&lt;button id="simulationOrgaInegalPause" type="button" class="btn btn-lg btn-outline-primary"&gt;Pause&lt;/button&gt;&lt;/p&gt;
+&lt;div id="simulationOrgaInegal"&gt;&lt;/div&gt;
+
+&lt;p&gt;Pour comprendre ce qu'il se passe: les premières 5 secondes (le premier mois), chacun grossit selon son expérience économique.
+Après ces 5 secondes, ils grossissent moins car quand la nouvelle monnaie est créée, la plus vieille périme (et s'ajoute à l'expérience économique de son porteur), ce qui stabilise les tailles.&lt;/p&gt;
+&lt;p&gt;Maintenant, qu'est-ce qu'on observe ?&lt;/p&gt;
+&lt;p&gt;Et bien, certes, au début, c'est plutôt inégal, normal avec de tels écarts de départ !
+Mais bien vite, ces écarts se remplissent et les balles les plus petites ne sont plus très loin des plus grosses.&lt;/p&gt;
+&lt;p&gt;Cette simulation est, encore une fois, très importante.
+Elle révèle à quel point la formule mathématique (la racine cubique, voir &lt;a href="https://economie-organique.fr/definition-experience-economique.html"&gt;l'expérience économique&lt;/a&gt;) est capitale dans la régulation naturelle de l'injustice économique.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sans contrôle, sans intervention de l'état, sans chômage ni autre aide économique, sans absolument rien, les inégalités se sont régulées.&lt;/strong&gt;
+N'est-ce pas révolutionnaire ?
+Ça ne vous fait peut-être ni chaud ni froid mais moi je trouve ça extraordinaire !&lt;/p&gt;
+&lt;p&gt;J'insiste sur cette notion de &lt;em&gt;contrôle&lt;/em&gt;, à laquelle je suis incroyablement opposé.
+Le contrôle impose un contrôleur, ce qui a plusieurs conséquences délétères:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Le contrôleur doit être payé, fournir un travail.&lt;/li&gt;
+&lt;li&gt;Le contrôleur doit, lui aussi, être contrôlé. Mais où s'arrête la chaîne du contrôle ?&lt;/li&gt;
+&lt;li&gt;Le contrôleur doit pouvoir sanctionner le contrôlé.&lt;/li&gt;
+&lt;li&gt;Ce qui implique que le contrôleur soit supérieur au contrôlé. Donc il y a hiérarchie intrinsèque !&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or, la hiérarchie, c'est terrible !&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Il n'est pas noble de se sentir supérieur à autrui. Il n'est noble que d'être supérieur à qui l'on était autrefois.&lt;/p&gt;
+&lt;p&gt;Kingsman&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bref, nous traiterons de cette problématique du contrôle et de la hiérarchie dans un article futur.&lt;/p&gt;
+&lt;h2&gt;Soyons réalistes&lt;/h2&gt;
+&lt;p&gt;Revenons à nos balles et ajoutons du réalisme à notre simulation.
+Dans la vraie vie, il est plutôt rare que les citoyens se payent entre eux: les transactions leboncoin et les braderies ne sont pas la norme.&lt;/p&gt;
+&lt;p&gt;En économie organique, entreprises, associations et services publics sont tous homogénéisés en une seule forme: &lt;a href="https://economie-organique.fr/definition-ecosysteme.html"&gt;l'écosystème&lt;/a&gt;.
+Cette simulation sera donc la dernière, impliquant citoyens et écosystèmes.&lt;/p&gt;
+&lt;p&gt;C'est la dernière parce qu'il n'y a rien à ajouter: ni banques, ni état, ni rien du tout.&lt;/p&gt;
+&lt;p&gt;L'objectif de cette dernière est surtout d'observer l'éventuelle stabilité de l'économie organique.
+Elle présente donc les caractéristiques suivantes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les citoyens ne se payent plus quand il s'entrechoquent.&lt;/li&gt;
+&lt;li&gt;Quand un citoyen touche un écosystème, il le paye 1 unité de monnaie citoyenne (s'il le peut) qui part directement dans le salaire d'un des acteurs de l'écosystème.&lt;/li&gt;
+&lt;li&gt;Quand un citoyen touche un écosystème, il y investit 1 unité de monnaie d'investissement (s'il le peut) qui s'ajoute à la trésorerie de l'écosystème (et donc influe sur sa taille).&lt;/li&gt;
+&lt;li&gt;Chaque écosystème a 3 acteurs du début à la fin. Pas de recrutement, pas de licenciement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;button id="simulationOrgaCompaniesStart" type="button" class="btn btn-lg btn-outline-primary"&gt;Go&lt;/button&gt;
+&lt;button id="simulationOrgaCompaniesPause" type="button" class="btn btn-lg btn-outline-primary"&gt;Pause&lt;/button&gt;&lt;/p&gt;
+&lt;div id="simulationOrgaCompanies"&gt;&lt;/div&gt;
+
+&lt;p&gt;Bon, cette simulation néglige certains éléments de l'économie organique, ce qui implique certaines limites:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L'investissement est pour toujours: une fois engagé, un citoyen n'arrête jamais d'investir dans un écosystème.&lt;/li&gt;
+&lt;li&gt;Ce qui implique que les écosystèmes ne réduisent ni ne disparaissent.&lt;/li&gt;
+&lt;li&gt;Aucun citoyen ne meurt ni ne nait. Donc le système finit par être un peu gros pour son cadre.&lt;/li&gt;
+&lt;li&gt;Enfin, les écosystèmes ne dépensent jamais la monnaie d'investissement reçue, comme s'ils n'avaient aucun frais.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Néanmoins, cette simulation fort limitée fait belle démonstration de certains points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bien qu'elle grossisse sans fin, ce qui est normal vis-à-vis de nos limitations, &lt;strong&gt;il n'y a pas explosion&lt;/strong&gt;. Le grossissement se fait doucement.&lt;/li&gt;
+&lt;li&gt;Contrairement au capitalisme, &lt;strong&gt;les citoyens ne sont pas plus pauvres en présence d'écosystèmes&lt;/strong&gt;, c'est peut-être même le contraire.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Les citoyens qui ne sont acteurs d'aucun écosystème&lt;/strong&gt; (ceux de la couleur des bords du cadre) &lt;strong&gt;ne sont pas beaucoup moins riches que les autres&lt;/strong&gt;, alors qu'ils ne touchent pas de salaire. Le plein emploi n'est pas un but, il n'est pas nécessaire !&lt;/li&gt;
+&lt;li&gt;Enfin, parfois un point devient tout petit, surtout quand la densité est forte, ce qui veut dire qu'il a dépensé toute sa monnaie citoyenne. Mais alors il regrossit rapidement à sa taille normale. &lt;strong&gt;Il n'y a aucune pauvreté durable&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Toutes ces simulations sont, encore une fois, loin d'être des démonstrations valables pour les académiciens.
+Mais pour le peu qu'elles représentent, la différence entre le comportement de la monnaie résèrve de valeur et des monnaies organiques est flagrante.&lt;/p&gt;
+&lt;p&gt;Cela est très encourageant et valide, à son échelle, l'idée qu'on peut se faire spontanément de l'économie organique.
+Contrairement à ses prédécesseurs, cette dernière fait preuve spontanément d'équité, de stabilité et de durabilité.&lt;/p&gt;
+&lt;p&gt;Et surtout, là où de nombreuses entités de pouvoir (état, banques centrales, etc) tentent de corriger les injustices inhérentes à la monnaie résèrve de valeur, aucun contrôle ni aucune correction n'est nécessaire pour réguler l'économie organique.
+Ce point est central étant donné qu'il assure qu'en plus d'être un outil d'échanges économiques plus juste, l'économie organique permet également un dispersement du pouvoir économique et, donc, du pouvoir tout court.&lt;/p&gt;
+&lt;p&gt;Tout cela est prometteur.
+Néanmoins, c'est moi qui le dit, en toute subjectivité.&lt;/p&gt;
+&lt;p&gt;Alors le mieux à faire reste de tester tout ça pour de vrai.&lt;/p&gt;</content><category term="Simulation interactive"/><category term="simulation"/><category term="capitalisme"/><category term="économie-organique"/></entry><entry><title>Petites simulations économiques</title><link href="https://economie-organique.fr/petites-simulations-%C3%A9conomiques.html" rel="alternate"/><published>2025-03-15T15:00:00+01:00</published><updated>2025-03-15T15:00:00+01:00</updated><author><name>Gus</name></author><id>tag:economie-organique.fr,2025-03-15:/petites-simulations-économiques.html</id><summary type="html">&lt;p&gt;Tous nos maux viendraient-ils de l'humain "défectueux" ? Je n'y crois pas. Faisons quelques simulations pour vérifier plutôt où nous mène en fait systématiquement une économie capitaliste.&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;Le capitalisme est un jeu de dés : si vous avez de la chance ou que vous trichez, vous gagnez ; si vous êtes intègre et malchanceux, vous perdez.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Afin d'affirmer ou d'infirmer ce postulat, nous allons nous adonner dans cet article à plusieurs mises en situation.
+Pour cela, nous allons faire des simulations graphiques, à base de balles rebondissantes, afin de voir un peu les implications d'une monnaie capitaliste.&lt;/p&gt;
+&lt;p&gt;Dans un prochain article, nous testerons la même chose avec, en comparaison, l'économie organique. &lt;/p&gt;
+&lt;p&gt;Et vous allez voir que les résultats sont à la fois prévisibles et surprenants.&lt;/p&gt;
+&lt;p&gt;Vous pouvez aussi regarder la vidéo où on parle de cet article :&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/M-CC_0t3CH0?si=2DiiFRe1iB0KmGnG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h1&gt;La base&lt;/h1&gt;
+&lt;p&gt;Avant tout, il est pertinent de préciser qu'une simulation reste quoi qu'il arrive une simulation.
+En tout cas, c'est ce que me dit ma femme.&lt;/p&gt;
+&lt;p&gt;Ce que je veux dire c'est qu'il n'est et ne sera jamais possible de simuler la vraie vie.
+Et de toute façon ça ne servirait à rien vu qu'une simulation est justement sensée simplifier un élément du monde pour nous permettre de mieux le comprendre (le monde).&lt;/p&gt;
+&lt;p&gt;Nous allons donc faire quelques hypothèses simplificatrices pour avoir un aperçu de la réalité.&lt;/p&gt;
+&lt;p&gt;Dans l'ensemble de cet article, les gens seront représentés par des balles.&lt;/p&gt;
+&lt;p&gt;Chaque personne va ainsi se promener dans un espace fini et chaque contact avec une autre personne (ici un choc entre deux balles) représentera une interaction économique, terme pompeux pour dire "l'un paye l'autre".&lt;/p&gt;
+&lt;p&gt;Ce qui est amusant c'est que les simulation ne sont pas enregistrées à l'avance, c'est-à-dire que c'est vous qui allez les lancer, une à une, et vous pourrez observer comment les choses évoluent.&lt;/p&gt;
+&lt;p&gt;Il se peut d'ailleurs que, dans un cas particulier, les remarques faites ici soient en désaccord avec ce que vous observez.
+C'est peu probable, mais possible.
+Dans tous les cas, partagez nous l'info.&lt;/p&gt;
+&lt;p&gt;Pour lancer une simulation, il suffit de cliquer sur le bouton &lt;em&gt;Go&lt;/em&gt; juste au-dessus.
+Pour la mettre en pause, recliquez sur &lt;em&gt;Pause&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Simple.&lt;/p&gt;
+&lt;h1&gt;Premier cas, un monde de (pas) bisounours&lt;/h1&gt;
+&lt;p&gt;Imaginons une première situation qui nous servira de base.
+Le cas le plus simple que l'on puisse imaginer.&lt;/p&gt;
+&lt;p&gt;Ici, chaque personne est donc une balle et tout le monde commence avec la même taille et la même vitesse que tous les autres.
+Un monde où chacun a les mêmes chances, quoi.
+De l'amour et des papillons.&lt;/p&gt;
+&lt;p&gt;C'est beau !&lt;/p&gt;
+&lt;p&gt;Notez que la taille de la balle indique la quantité d'argent que la personne détient.
+Donc, plus elle est grosse, plus elle est riche.
+Toute ressemblance avec des personnes réelles est pure coincidence.
+Et plus elle est petite, plus elle est pauvre.
+Il va sans dire.&lt;/p&gt;
+&lt;p&gt;Cet usage de la dimension a deux rôles : un esthétique (c'est parlant, visuel) et un réaliste (plus vous êtes riche, plus vous avez d'opportunités économiques).&lt;/p&gt;
+&lt;p&gt;Je vous laisse cliquer sur ce premier cas et regarder un peu comment ça évolue.&lt;/p&gt;
+&lt;p&gt;&lt;button id="simulation0Start" type="button" class="btn btn-lg btn-outline-primary"&gt;Go&lt;/button&gt;
+&lt;button id="simulation0Pause" type="button" class="btn btn-lg btn-outline-primary"&gt;Pause&lt;/button&gt;&lt;/p&gt;
+&lt;div id="simulationBase"&gt;&lt;/div&gt;
+
+&lt;p&gt;Au début, ça ne sautera pas aux yeux, les balles bougent et rebondissent, ok.
+Mais si vous laissez tourner la simulation assez longtemps, des écarts commencent à se creuser.
+Des balles prennent une belle dimension tandis que certaines se promènent, minuscules petits pois sur une piste de bowling.&lt;/p&gt;
+&lt;p&gt;Ce qui est frappant avec ce premier essai, c'est que même &lt;strong&gt;dans un cas aussi simple et complètement hasardeux, des inégalités apparaissent et s'installent&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Sans aucune stratégie, aucune !, des riches et des pauvres durables apparaissent.
+Les boules riches ne sont pourtant pas plus intelligentes ni plus fortes.
+Et symétriquement, les boules les plus pauvres ne sont ni nulles, ni faibles, ni bêtes.&lt;/p&gt;
+&lt;p&gt;Notez cependant que cela prend un peu de temps et que, parfois, les inégalités peuvent se renversent.&lt;/p&gt;
+&lt;p&gt;Cette simulation, aussi limitée soit-elle, pourrait déjà suffire à démontrer que la monnaie capitaliste (à savoir qui se conserve en temps et en quantité) crée spontanément et mécaniquement des riches et des pauvres.&lt;/p&gt;
+&lt;p&gt;Car j'insiste sur le côté hasardeux des paramètres de la simulation :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ce n'est pas le plus pauvre qui paye le plus riche, c'est au hasard.&lt;/li&gt;
+&lt;li&gt;Et pourtant on protège quand même les plus pauvres, ici : arrivés une certaine petite taille limite, ils ne dépensent plus.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Quelques inégalités&lt;/h1&gt;
+&lt;p&gt;En partant tous égaux, on voit déjà que le système, hors de toute contrainte, mène déjà à un déséquilibrage systématique.
+Et pourtant les balles n'ont pas besoin de manger et peuvent rester pauvres sans souffrir.&lt;/p&gt;
+&lt;p&gt;Alors, comme on est là pour tester, ajoutons un brin d'injustice.
+Juste un brin.
+Et, malheureusement, on pourrait reformuler sans rougir : "ajoutons un brin de réalisme".&lt;/p&gt;
+&lt;p&gt;Maintenant, les personnes, toujours sous forme de balles, vont avoir des tailles de départ différentes.
+Certaines auront une cuillère d'argent dans la bouche, et d'autre un tison dans le... enfin vous cernez la métaphore positionnelle.&lt;/p&gt;
+&lt;p&gt;Ajoutons également des vitesses aléatoires.
+Certaines auront beaucoup d'interactions (les rapides) et d'autres moins (les lentes).
+Cela représente, d'une certaine manière, la proportion à faire des échanges.
+Un point presque immobile représentera un hermite dans sa cabane en montagne ; là où une balle de fusil sera une accro au shopping.&lt;/p&gt;
+&lt;p&gt;Voyons voir ce que ça donne.&lt;/p&gt;
+&lt;p&gt;&lt;button id="simulation1Start" type="button" class="btn btn-lg btn-outline-primary"&gt;Go&lt;/button&gt;
+&lt;button id="simulation1Pause" type="button" class="btn btn-lg btn-outline-primary"&gt;Pause&lt;/button&gt;&lt;/p&gt;
+&lt;div id="simulationRandomSpeedAndSize"&gt;&lt;/div&gt;
+
+&lt;p&gt;Ici, on peut faire d'autres petites observations qui semblent plutôt refléter une certaine réalité.&lt;/p&gt;
+&lt;p&gt;La première est que, quand on commence gros (riche), on a quand même de très grandes chances de le finir.
+Ce qui en dit long sur l'incomensurable injustice que représente notamment l'héritage.&lt;/p&gt;
+&lt;p&gt;Aussi, il semblerait que la vitesse n'ait pas vraiment d'importance, du moins comparée au capital de départ.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;La conclusion de cette première partie est très importante parce qu'elle met en déroute pas mal d'idées reçues.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Beaucoup, qui ne se penchent jamais sur l'économie, ce qu'on comprend, sont tentés par quelques raccourcis tels que :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;"&lt;em&gt;C'est parce que l'humain est mauvais&lt;/em&gt;"&lt;/li&gt;
+&lt;li&gt;"&lt;em&gt;C'est à cause des entreprises&lt;/em&gt;"&lt;/li&gt;
+&lt;li&gt;"&lt;em&gt;C'est à cause des politiciens&lt;/em&gt;"&lt;/li&gt;
+&lt;li&gt;Et d'autres phrases du même accabit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mais la vérité est plus simple et, pourtant, plus difficile à admettre : &lt;strong&gt;une monnaie réserve de valeur&lt;/strong&gt; est, par construction, une monnaie capitaliste et &lt;strong&gt;implique spontanément des inégalités catastrophiques&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Peut-être n'êtes vous pas comme moi émoustillé par cette "découverte", mais est-ce que vous vous rendez compte de ce que ça implique ?
+Cette simple simulation nous déculpabilise: si vous avez des gros problèmes économiques, c'est surement en grande partie la faute à pas de bol (sauf si vous êtes un panier percé, éventuellement).
+Et, symétriquement, si vous êtes riche, ne faites pas le fanfaron qui "mérite", qui est trop fort et a su nianiania, nan ! Que dale, c'est juste (majoritairement) de la chatte.&lt;/p&gt;
+&lt;p&gt;Tout ça fait relativiser, à mon goût.&lt;/p&gt;
+&lt;p&gt;Voilà, tout est déjà plus ou moins dit.
+Mais allons tout de même plus loin, histoire de voir si les choses s'améliorent ou empirent.
+Pas de spoilers.&lt;/p&gt;
+&lt;h1&gt;La start-up nation&lt;/h1&gt;
+&lt;p&gt;Maintenant, complexifions un peu le tout.
+Parce que les échanges entre particuliers, c'est sympa mais pas très réaliste.&lt;/p&gt;
+&lt;p&gt;De nos jours, il est plutôt rare de faire du CtoC (terme de com' pour dire de particulier à particulier: "Customer to Customer").
+En fait, tout n'est que BtoC et BtoB (les entreprises vendent aux autres entreprises et aux particuliers).&lt;/p&gt;
+&lt;p&gt;Donc, sans plus attendre, ajoutons cela et modifions un peu notre simulation.&lt;/p&gt;
+&lt;p&gt;Voici ce qu'il y a de neuf:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenant, quand une balle en touche une autre, rien ne se passe.&lt;/li&gt;
+&lt;li&gt;Les carrés représentent des entreprises.&lt;/li&gt;
+&lt;li&gt;Quand une entreprise atteint une certaine taille, elle embauche une personne au hasard (qui aura alors la même couleur que l'entreprise).&lt;/li&gt;
+&lt;li&gt;Quand une entreprise réduit en taille, elle licencie le dernier arrivé.&lt;/li&gt;
+&lt;li&gt;Chaque entreprise verse un salaire toutes les 5 secondes à chacun de ses employés.&lt;/li&gt;
+&lt;li&gt;Quand un individu touche une entreprise, il lui paye une valeur fixe, comme si un achat était fait.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;button id="simulation2Start" type="button" class="btn btn-lg btn-outline-primary"&gt;Go&lt;/button&gt;
+&lt;button id="simulation2Pause" type="button" class="btn btn-lg btn-outline-primary"&gt;Pause&lt;/button&gt;&lt;/p&gt;
+&lt;div id="simulationWithCompanies"&gt;&lt;/div&gt;
+
+&lt;p&gt;Même en modifiant les paramètres (salaire payé par les entreprises toutes les 5 secondes, dépenses faites par les personnes à chaque contact, etc) : dans la plupart des cas, les entreprises ou une entreprise spécifique prend le dessus sur tout et devient énorme.&lt;/p&gt;
+&lt;p&gt;Ce qui reste représentatif d'une certaine réalité : plus une entreprise est grosse et présente dans l'esprit des clients (Google, Amazon, Facebook, Apple, Microsoft, par exemples), plus elle "attire" les dépenses et, donc, plus elle grossit encore.&lt;/p&gt;
+&lt;p&gt;Mais, au-delà de cet aspect explosif de la dimension des entreprises, on peut surtout observer que les citoyens et citoyennes (les ronds) sont majoritairement pauvres.
+En fait, ceux qui ont accès à l'emploi s'en sortent (tant qu'ils conservent cet emploi) et tous ceux qui en sont exclus sont dans une pauvreté immense.
+Ainsi, contrairement à ce que l'on pourrait croire &lt;strong&gt;le salariat est encore plus appauvrissant et clivant&lt;/strong&gt; : il génère des inégalités plus nombreuses et plus grandes.&lt;/p&gt;
+&lt;p&gt;Et pourtant, encore une fois, tout n'est ici que hasard !&lt;/p&gt;
+&lt;p&gt;Ce qui ajoute grandement à la remise en question de la notion de "mérite".
+Ici, une entreprise qui réussit et qui écrase les autres, c'est juste du bol.
+Ce n'est pas une innovation disruptive ou révolutionnaire qui lui fait prendre de l'ampleur, ce n'est que concours de circonstance.&lt;/p&gt;
+&lt;p&gt;Bien sûr, je sais que, dans le monde réel, les innovations, les performances de communications et autres éléments de triche et de manipulation des clients ont aussi un impact sur la "réussite" d'une entreprise.
+Mais ces simulations sont là pour nous rappeler que, même sans tous ces outils, de toute manière, les inégalités seraient les mêmes.&lt;/p&gt;
+&lt;h1&gt;Soyons "bankables"&lt;/h1&gt;
+&lt;p&gt;Enfin, une petite dernière pour la route, et pas des moindres.&lt;/p&gt;
+&lt;p&gt;Nous avons des gens, nous avons des entreprises, mais il nous manque un élément central dans la structure de notre société : la banque !&lt;/p&gt;
+&lt;p&gt;Alors ajoutons en de suite à notre simulation pour y ajouter encore une touche de réalisme.
+Voici le fonctionnement des banques, représentées par des triangles :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quand un citoyen (rond) ou une entreprise (carré) la touche, il y a une chance sur 10 pour que la banque lui fasse un prêt.&lt;/li&gt;
+&lt;li&gt;Dans ce cas, elle lui donne 10€.&lt;/li&gt;
+&lt;li&gt;Ensuite, toutes les 2 secondes, l'emprunteur rembourse 1€ jusqu'à un total de 11 (oui, il y a des intérêts bien sûr).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Voyons voir ce qui se passe alors.&lt;/p&gt;
+&lt;p&gt;&lt;button id="simulation3Start" type="button" class="btn btn-lg btn-outline-primary"&gt;Go&lt;/button&gt;
+&lt;button id="simulation3Pause" type="button" class="btn btn-lg btn-outline-primary"&gt;Pause&lt;/button&gt;&lt;/p&gt;
+&lt;div id="simulationWithBanks"&gt;&lt;/div&gt;
+
+&lt;p&gt;Alors cette fois, c'est du lourd.&lt;/p&gt;
+&lt;p&gt;Au début, tout parait normal, chacun fait son bout de chemin et la vie est belle.
+Enfin, même si les inégalités se creusent déjà tout naturellement, bien sûr.&lt;/p&gt;
+&lt;p&gt;Mais au bout d'un moment, tout part en vrille, la banque et les entreprises, mais aussi certaines personnes deviennent énormes !
+Elles écrasent tout et le système s'emballe dans une explosion complètement insensée.&lt;/p&gt;
+&lt;p&gt;Je vous le dit tout de suite : ce n'est pas un bug.
+La simulation n'est pas mal foutue.
+Ce que vous voyez n'est autre qu'une meilleure représentation de la réalité du capitalisme.&lt;/p&gt;
+&lt;p&gt;Et oui, les banques faisant leurs petits prêts, elles créent de la monnaie.
+Il y en a alors de plus en plus dans le système.
+Et plus il y a d'argent en jeu, plus les inégalités se creusent, plus les gros deviennent gros et plus ils en attirent encore et encore et encore.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Le système capitaliste&lt;/strong&gt; qu'est le nôtre (et à peu prêt partout sur terre) &lt;strong&gt;est exponentiel&lt;/strong&gt;.
+Il y est obligé !
+Ce n'est pas évitable car, s'il n'y a pas de plus en plus de monnaie, alors il ne peut pas y avoir de croissance.
+Et s'il n'y a pas de croissance, le capitalisme s'effondre.
+Et à ce moment là, ce n'est pas beau à voir, je vous assure.&lt;/p&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;J'insiste une fois de plus sur le fait que ces simulations ne sont que cela.
+Qui plus est, elles ne sont pas réalisées dans un contexte extrêmement savant par des experts de l'économie, de la recherche ou que sais-je encore.&lt;/p&gt;
+&lt;p&gt;Cela dit, leur simplicité nous permet tout de même de nous questionner:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L'humain est-il vraiment mauvais ? Et ainsi la cause de tous nos maux ?&lt;/li&gt;
+&lt;li&gt;Le mérite, les compétences, la capacité à prendre des risques sont-ils vraiment des éléments différenciants ?&lt;/li&gt;
+&lt;li&gt;Tout ce qui a été ajouté au-dessus de la "monnaie réserve de valeur" (entreprises, banques, etc) a-t-il pour but de rééquilibrer la balance ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ici, on peut être tenté de répondre non, non et non.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L'humain peut être aussi bon ou mauvais qu'il le veut, l'outil économique fondamental qu'il utilise&lt;/strong&gt; (la monnaie réserve de valeur, je rabache) &lt;strong&gt;le poussera quoi qu'il arrive vers une situation d'inégalités complètement hasardeuses et incorrigibles.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C'est le hasard avant tout qui positionne les richesses&lt;/strong&gt;, que ce soit par l'héritage, par le "bon endroit au bon moment", par les rencontres que l'on fait, par les opportunités qui se présentent.
+Et nos facultés (prise de risque, capacité à comprendre, à se projeter, à cerner les besoins, etc) jouent seulement une toute petite part dans nos résultats.&lt;/p&gt;
+&lt;p&gt;Enfin, &lt;strong&gt;tout ce qui fait la structure complexe de nos sociétés&lt;/strong&gt; (entreprises, banques, prêts avec intérêts, banques centrales, systèmes financiers, héritage, propriété, etc) &lt;strong&gt;semble n'avoir pour fonction que de creuser encore plus les inégalités&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Tout cela est porteur d'espoir, si si !
+Parce que, sachant cela, on comprend qu'en quittant la monnaie réserve de valeur, nous irons vers des société moins inégales, plus justes et surement plus simples.&lt;/p&gt;
+&lt;p&gt;Finalement, je vous invite à poursuivre votre lecture, pour continer à simuler comme des frustrés, en lisant la seconde partie de cet article : &lt;a href="/simulations-organiques"&gt;les mêmes simulations, mais dans l'économie organique&lt;/a&gt; cette fois.&lt;/p&gt;</content><category term="Simulation interactive"/><category term="simulation"/><category term="capitalisme"/><category term="économie-organique"/></entry></feed>
